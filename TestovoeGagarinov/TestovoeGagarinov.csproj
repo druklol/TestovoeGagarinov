@@ -56,8 +56,8 @@
   <ItemGroup>
     <Compile Include="App.cs" />
     <Compile Include="Commands\CreateWallsCommand.cs" />
-    <Compile Include="Sevices\SelectionServiceBase.cs" />
-    <Compile Include="Sevices\UserRoomSelectionService.cs" />
+    <Compile Include="Services\SelectionServiceBase.cs" />
+    <Compile Include="Services\UserRoomSelectionService.cs" />
     <Compile Include="Utils\Filters\RoomSelectionFilter.cs" />
     <Compile Include="Commands\Handlers\BuildWallsHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

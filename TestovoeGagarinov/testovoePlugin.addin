@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<RevitAddIns>
+	<AddIn Type="Application">
+		<Name>Testovoe plugin</Name>
+		<Assembly>TestovoeGagarinov.dll</Assembly>
+		<AddInId>100AD374-06C2-4036-88E4-077DB071007E</AddInId>
+		<FullClassName>TestovoeGagarinov.App</FullClassName>
+		<VendorId>Gagarinov</VendorId>
+		<VendorDescription>testovoe for stroyektproject</VendorDescription>
+	</AddIn>
+</RevitAddIns>

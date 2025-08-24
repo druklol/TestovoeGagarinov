@@ -21,7 +21,7 @@ namespace TestovoeGagarinov.ViewModel
         private readonly BuildWallsHandler _handler;
         private readonly ExternalEvent _event;
 
-        private readonly UserRoomSelectionService _roomService;
+        private readonly SelectionServiceBase<Room> _roomService;
 
         public RelayCommand PickRoomsCommand { get; }
         public RelayCommand BuildWallsCommand { get; }

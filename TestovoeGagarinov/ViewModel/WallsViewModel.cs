@@ -1,5 +1,6 @@
 ﻿using Autodesk.Revit.DB;
 using Autodesk.Revit.DB.Architecture;
+using Autodesk.Revit.Exceptions;
 using Autodesk.Revit.UI;
 using Autodesk.Revit.UI.Selection;
 using System;
@@ -7,12 +8,10 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using System.Text;
-using System.Threading.Tasks;
 using TestovoeGagarinov.Filters;
 using TestovoeGagarinov.Handlers;
-using TestovoeGagarinov.Sevices;
+using TestovoeGagarinov.Services;
 using TestovoeGagarinov.Utils;
 
 namespace TestovoeGagarinov.ViewModel
@@ -48,12 +47,15 @@ namespace TestovoeGagarinov.ViewModel
             {
                 rooms = _roomService.PickElements();
             }
-            catch (OperationCanceledException)
+            catch (Autodesk.Revit.Exceptions.OperationCanceledException)
             {
                 TaskDialog.Show("Пустота", "Вы не выбрали помещения!");
+                return;
             }
-            catch (Exception )
+            catch (Exception ex)
             {
+                TaskDialog.Show("Ошибка", $"Непредвиденная ошибка! {ex}");
+                return;
             }
 
             foreach(var r in rooms)

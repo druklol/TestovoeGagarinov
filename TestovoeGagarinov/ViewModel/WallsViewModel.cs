@@ -42,7 +42,7 @@ namespace TestovoeGagarinov.ViewModel
         private void PickRooms()
         {
             Rooms.Clear();
-            IList<Room> rooms = null;
+            IList<Room> rooms;
             try
             {
                 rooms = _roomService.PickElements();
